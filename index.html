@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sourav Kumar - Project Directory</title>
+    <style>
+        /* --- DESIGN SETTINGS --- */
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f4f6f8;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* --- BRANDING AREA (HEADER) --- */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-color);
+        }
+
+        .branding-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 0 0 0.5rem 0;
+            letter-spacing: 1px;
+        }
+
+        .branding-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.85;
+            font-weight: 300;
+        }
+
+        /* --- MAIN CONTENT AREA --- */
+        .container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-heading {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            border-bottom: 2px solid #e1e4e8;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- PAGE LINKS LIST --- */
+        .page-directory {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .page-directory li {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border: 1px solid #e1e4e8;
+        }
+
+        .page-directory li:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            border-color: var(--accent-color);
+        }
+
+        .page-directory a {
+            display: block;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .page-directory a span {
+            display: block;
+            font-size: 0.95rem;
+            color: #666;
+            font-weight: normal;
+            margin-top: 0.4rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- BRANDING AREA -->
+    <header>
+        <h1 class="branding-title">Sourav Kumar</h1>
+        <div class="branding-subtitle">Govt. Primary Teacher and Developer</div>
+        <div class="branding-subtitle">📍 From - Arwal, Bihar</div>
+    </header>
+
+    <!-- NAVIGATION / STATIC PAGES DIRECTORY -->
+    <main class="container">
+        
+        <h2 class="section-heading">Directory Overview</h2>
+        
+        <ul class="page-directory">
+            
+            <!-- Link 1 -->
+            <li>
+                <a href="mathematics/Counting.html">
+                    🔢   Mathematics - Counting
+                    <span>Interactive Activity to fill the Counting Grid. Develops Visualisation of Numbers in the Space.</span>
+                </a>
+            </li>
+
+            <!-- Link 2 -->
+            <li>
+                <a href="mathematics/Add_Subtract.html">
+                    ➕   Mathematics - Addition and Subtraction
+                    <span>Interactive Activity to Visualise Addition and Subtraction on the Counting Grid.</span>
+                </a>
+            </li>
+
+            <!-- 
+            =========================================
+            HOW TO ADD A NEW PAGE:
+            Copy the block below, uncomment it (remove the <!- - and - ->), 
+            and change the href to your actual HTML file name. 
+            =========================================
+            
+            <li>
+                <a href="your-new-page.html">
+                    ⭐ Title of Your New Page
+                    <span>A short description of what this page is about.</span>
+                </a>
+            </li>
+            
+            -->
+        </ul>
+    </main>
+
+    <footer>
+        &copy; 2026 Sourav Kumar. Hosted on GitHub Pages.
+    </footer>
+
+</body>
+</html>

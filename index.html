@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sourav Kumar - Project Directory</title>
+    <title>Sourav Kumar - Kids Project Directory</title>
+    <!-- Standard favicon for browser tabs and bookmarks -->
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <!-- Icon for smartphones and tablets (saving to home screen) -->
+    <link rel="apple-touch-icon" href="images/icon.png">
+
+
     <style>
         /* --- DESIGN SETTINGS --- */
         :root {
@@ -98,13 +104,60 @@
             margin-top: 0.4rem;
         }
 
-        /* --- FOOTER --- */
+        /* --- FOOTER & DIALOG STYLES --- */
         footer {
             text-align: center;
             padding: 2rem;
             color: #777;
             font-size: 0.9rem;
             margin-top: 2rem;
+        }
+
+        .footer-links {
+            margin-top: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            cursor: pointer;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Dialog Box Styling */
+        dialog {
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            padding: 2rem;
+            max-width: 400px;
+            background-color: white;
+            color: var(--text-color);
+        }
+
+        dialog::backdrop {
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .dialog-close-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        .dialog-close-btn:hover {
+            background-color: var(--accent-color);
         }
     </style>
 </head>
@@ -113,8 +166,7 @@
     <!-- BRANDING AREA -->
     <header>
         <h1 class="branding-title">Sourav Kumar</h1>
-        <div class="branding-subtitle">Govt. Primary Teacher and Developer</div>
-        <div class="branding-subtitle">📍 From - Arwal, Bihar</div>
+        <div class="branding-subtitle">Bihar Govt. Primary Teacher and Programmer</div>
     </header>
 
     <!-- NAVIGATION / STATIC PAGES DIRECTORY -->
@@ -158,8 +210,28 @@
         </ul>
     </main>
 
+    <!-- ABOUT DEVELOPER DIALOG BOX -->
+    <dialog id="aboutDialog">
+        <h2 style="margin-top: 0; color: var(--primary-color);">About the Developer</h2>
+        <p><strong>Sourav Kumar</strong></p>
+        <p>I am a primary school teacher in Bihar with a passion for software development. I build educational applications, custom Android tools, and Python utilities to help make learning and daily tasks more interactive and efficient.</p>
+        
+        <!-- Using a form with method="dialog" automatically closes the dialog when submitted -->
+        <form method="dialog" style="text-align: right;">
+            <button class="dialog-close-btn">Close</button>
+        </form>
+    </dialog>
+
+    <!-- FOOTER -->
     <footer>
-        &copy; 2026 Sourav Kumar. Hosted on GitHub Pages.
+        <div>&copy; 2026 Sourav Kumar. Hosted on GitHub Pages.</div>
+        <div class="footer-links">
+            <!-- This onclick attribute natively opens the dialog box above -->
+            <a onclick="document.getElementById('aboutDialog').showModal()">About Developer</a> | 
+            
+            <!-- UPDATE THIS LINK with your actual GitHub repository URL -->
+            <a href="https://github.com/applysourav/Webpage-Kids_Learning_Materials/discussions" target="_blank" rel="noopener noreferrer">Suggestions</a>
+        </div>
     </footer>
 
 </body>
